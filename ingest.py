@@ -10,6 +10,7 @@ from langchain_groq import ChatGroq
 
 load_dotenv()
 HF_MODEL = os.getenv("HF_EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+DATA_DIR=Path("data")
 VECTOR_DIR = Path("vectorstore_immunization")
 VECTOR_DIR.mkdir(exist_ok=True)
 
@@ -56,3 +57,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
